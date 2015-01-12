@@ -1,0 +1,61 @@
+/* 
+    
+    Folio Theme Color Stylsheet
+    Easily take control of the colors on you're theme by editing
+    the color codes below
+
+*/
+
+
+/*  Background Colors 
+    Active navigation item, icon hovers, buttons hovers, blogdate */
+    
+    .nav>li.active>a, .nav>li.active>a:hover,
+    .block-thumb .overlay .fa,
+    .calltoaction .btn:hover,
+    .footer .footeritem form .btn.submit:hover,
+    .footer .btn-border:hover,
+    .date,
+    .btn-border:hover, 
+    .btn-slide:hover,
+    .nav>li>a:hover {
+        background-color: #09F;
+    }
+
+    /* Navigation dropdown background color
+    Footer background color & Sticky navigation background color */
+    
+    .navbar .dropdown-menu {
+        background-color: #fff;
+    }
+    
+    .footer,
+    .fixednav {
+        background-color: #171717;
+    }
+
+
+/* Colors
+    
+    Icon hovers, footer popular post heart hover, sidebar social icons 
+    Blog link hover*/
+    
+    .services .service:hover .fa,
+    /*.popular-posts li a:hover .fa,*/
+    .sidebar .social li a:hover,
+    .block-thumbnail .block-data h3 a:hover {
+        color: #09F;
+    }
+
+
+/* Borders
+    
+    Button hover borders */
+    
+    .footer .btn-border:hover,
+    .footer .footeritem form .btn.submit:hover,
+    .btn-border:hover, 
+    .btn-slide:hover,
+    .calltoaction .btn:hover {
+        border-color: #09F;
+    }
