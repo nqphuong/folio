@@ -1,3 +1,3 @@
 # folio
-Personal blog site with Wordpress
+Personal blog site with Wordpress.
 Edit later...
