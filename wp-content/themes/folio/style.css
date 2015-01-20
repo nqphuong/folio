@@ -355,6 +355,7 @@ span.feature {
 .navbar {
     /*padding: 20px 0;*/
     margin-bottom: 0px;
+    background-color: #f9faf7;
 }
 
 .nav-main {
@@ -491,6 +492,7 @@ nav ul.nav-main li.dropdown:hover a.dropdown-toggle,
 /* Intro Section */
 .intro {
     padding: 5px 0;
+    background-color: #f9faf7;
 }
 
 .intro-content {
@@ -944,8 +946,14 @@ span.value.bold {
 
 
 /* Blog overview */
+.blog {
+    background-color: #f9faf7;
+}
 .blog-post {
     margin-bottom: 20px;
+    border-radius: 3px;
+    padding: 7 7;
+    background-color: #fff;
 }
 .blog-post img {
     width: 100%;
