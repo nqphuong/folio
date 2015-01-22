@@ -32,9 +32,9 @@
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-4 logofooter" >
-				<div><i class="fa fa-bug iconfooter"></i></div>
+				<div><img src="<?php echo get_template_directory_uri(); ?>/images/thumbs/logo115_142.png"/></div>
 				<div class="footeritem">
-					<p><i class="fa fa-copyright"> 2015 MR3J.COM. ALL RIGHTS RESERVED.</p></i>
+					<p><i class="fa fa-copyright">2015 MR3J.COM. ALL RIGHTS RESERVED.</p></i>
 				</div>
 			</div>
 		</div>

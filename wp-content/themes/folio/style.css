@@ -432,7 +432,7 @@ nav ul.nav-main li.dropdown:hover a.dropdown-toggle,
 }
 
 .navbar-brand {
-    padding: 23px 0px 0px 15px;
+    padding: 6px 0px 0px 10px;
 }
 .navbar-brand span {
     font-size: 28px;
@@ -1188,6 +1188,14 @@ textarea {
 .logofooter {
     text-align: center;
     margin-top: 30px;
+}
+
+.logofooter > div {
+    padding-bottom: 15px;
+}
+
+.logofooter > div > img {
+    width: 80px;
 }
 
 .iconfooter {

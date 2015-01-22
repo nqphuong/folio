@@ -7,7 +7,7 @@
     <meta name="author" content="RichardNguyen">
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico"><!--OK-->
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon1.ico"><!--OK-->
     
     <title><?php bloginfo('title'); ?></title>
     
@@ -54,8 +54,7 @@
 						</button>
 						<!-- begin logo in navigation -->
 						<a class="navbar-brand" href="<?php get_site_url(); ?>">
-								<i class="fa fa-bug"></i>
-								<span>Blog</span>
+								<span><img src="<?php echo get_template_directory_uri(); ?>/images/thumbs/logo57_71.png" />&nbsp;Mr.3J's blog</span>
 						</a>
 						<!-- end logo in navigation -->
 					</div>	
