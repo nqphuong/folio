@@ -7,7 +7,7 @@
     <meta name="author" content="RichardNguyen">
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon1.ico"><!--OK-->
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon2.ico"><!--OK-->
     
     <title><?php bloginfo('title'); ?></title>
     
