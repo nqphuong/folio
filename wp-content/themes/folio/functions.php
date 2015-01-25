@@ -31,10 +31,10 @@ function custom_get_main_menu(){
 							<!-- begin navigation items -->
 							<li><a href="' . get_site_url() . '">Home</a></li>' .
 							custom_get_menu_categories() .
-							'<li><a href="contact.html">About me</a></li>
-							<li><a href="contact.html">Contact</a></li>
-							<!-- end navigation items -->
-						</ul>';
+							//'<li><a href="contact.html">About me</a></li>' .
+							//'<li><a href="contact.html">Contact</a></li>' .
+							'<!-- end navigation items -->' .
+						'</ul>';
     
     echo $html;
 }
