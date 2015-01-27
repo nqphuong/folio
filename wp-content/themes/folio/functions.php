@@ -225,8 +225,8 @@ function custom_get_comment_child($parent_id = 0, $comments, $display = true){
 //Image thumbnail by default
 function custom_the_post_thumbnail(){
 	$html = '<img width="600" height="400"
-		src="http://localhost/wordpress/wp-content/uploads/2014/12/default3.jpg"
-		class="attachment-full wp-post-image" alt="default">';
+		src="' . get_site_url() . '/wp-content/uploads/2014/12/default3.jpg"' .
+		'class="attachment-full wp-post-image" alt="default">';
 	
 	echo $html;
 }
