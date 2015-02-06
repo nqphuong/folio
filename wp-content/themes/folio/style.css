@@ -1009,7 +1009,7 @@ span.seperator {
     border-left: 3px solid #333;
 }
 .blogcontent p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .blogcontent a {
     color: #09F;
@@ -1043,12 +1043,23 @@ span.seperator {
 }
 .blogcontent strong {
     font-weight: 900;
-    color: #fff;
+    /*color: #fff;*/
+}
+.blogcontent .cmdsnippet{
+    padding: 5 20px;
+    background-color: #f9faf7;
+    border-radius: 5px;
+    color: #09F;
+    font-size: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2em;
+    margin-bottom: 5px;
 }
 
     /* Comment area */
 .author-image {
-    width: 80px;
+    width: 50px;
     float: left;
     margin: 0px 20px 0px 0px;
 }
