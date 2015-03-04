@@ -1014,7 +1014,7 @@ span.seperator {
 .blogcontent a {
     color: #09F;
     font-weight: 600;
-    border-bottom: 1px dashed #666;
+    /*border-bottom: 1px dashed #666;*/
     padding: 5px;
 }
 .blogcontent ul {
@@ -1213,4 +1213,46 @@ textarea {
     font-size: 70px;
     margin-bottom: 20px;
     color: #09F;
+}
+
+.sharebox {
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+}
+
+.sharebox_left {
+    float: left;
+    margin-top: -22;
+    margin-bottom: -20px;
+    width: 150px;
+}
+
+.sharebox_right {
+    margin: 10px 12px;
+    padding: 0 12px;
+    overflow: hidden;
+}
+
+.sharebox_right>a {
+    font-size: 25px;
+    font-weight: 500;
+    border-bottom: 0;
+    color: #282828;
+}
+
+.sharebox_right_desc {
+    font-weight: 400;
+}
+
+.sharebox_right_url {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 500;
+    color: #9197a2;
+    letter-spacing: .1em;
+    margin-top: 20px;
+}
+
+.clear {
+    clear: both;
 }

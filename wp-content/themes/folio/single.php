@@ -41,35 +41,18 @@
 
 					<div class="blogcontent">
                         <?php
-							
 							$content = get_post(get_the_ID())->post_content;
+							$final_content = '';
 							if(strpos($content, '[image-show]') !== false){
-								preg_match_all("'\[image-show\](.*?)\[\/image-show\]'si", $content, $matches);
-
-								$slide = [];
-								foreach($matches[1] as $match){//"'img\s+src=\"(.*?)\" alt=\"(.*?)\" class=\"(.*?)\"'"
-									preg_match_all("'img(.*?)src=\"(.*?)\"'", $match, $imgs);
-									$slide[] = $imgs[2];
-								}
-								
-								$html_img_slide = array();
-								foreach($slide as $s)
-									$html_img_slide[] = custom_image_slider($s);
-								//var_dump($html_img_slide);
-								
-								$arr = preg_split('/(\[image-show\])|(\[\/image-show\])/', $content);
-								$k = 0;
-								$final_content = '';
-								foreach($arr as $text){
-									if(strpos($text, '<img') !== false){
-										$final_content .= $html_img_slide[$k];
-										$k++;
-									} else {
-										$final_content .= $text;
-									}
-								}
+								$final_content = BBC_Imageshow($content);
+							}
+							
+							if(strpos($content, '[share]') !== false){
+								$final_content = BBC_Sharebox(($final_content == '') ? $content : $final_content);
+							}
+							
+							if($final_content != ''){
 								echo $final_content;
-								
 							} else {
 								the_content();
 							}

@@ -299,7 +299,9 @@ function custom_pagination_nav(){
 	echo '</ul></div>';
 }
 
-//
+//----------------
+//Show image slide
+//----------------
 function custom_image_slider($srcs){
 	$html = '';
 	$html .= '
@@ -315,4 +317,90 @@ function custom_image_slider($srcs){
 	return $html;
 }
 
+//-----------------------------------------------
+// Sharing site panel - Inspiration from Facebook
+//-----------------------------------------------
+function custom_sharing_site_panel($title, $description, $thumbnail, $url){
+	$html = '';
+	$html .=
+	'<div class="sharebox">
+		<div class="sharebox_left">
+			<a href="' . $url . '" target="_blank"><img src="' . $thumbnail . '" alt="" /></a>
+		</div>
+		<div class="sharebox_right">
+			<a href="' . $url . '" target="_blank">' .
+				$title .
+			'</a>
+			<div class="sharebox_right_desc">' . 
+				$description .
+			'</div>
+			<div class="sharebox_right_url">' .
+				$url .
+			'</div>
+		</div>
+	</div>
+	<div class="clear"></div>';
+	
+	return $html;
+}
+
+//--------
+//BBC Code
+//--------
+function BBC_Imageshow($content){
+	preg_match_all("'\[image-show\](.*?)\[\/image-show\]'si", $content, $matches);
+	$final_content = '';
+	$slide = [];
+	foreach($matches[1] as $match){//"'img\s+src=\"(.*?)\" alt=\"(.*?)\" class=\"(.*?)\"'"
+		preg_match_all("'img(.*?)src=\"(.*?)\"'", $match, $imgs);
+		$slide[] = $imgs[2];
+	}
+	
+	$html_img_slide = array();
+	foreach($slide as $s)
+		$html_img_slide[] = custom_image_slider($s);
+	//var_dump($html_img_slide);
+	
+	$arr = preg_split('/(\[image-show\])|(\[\/image-show\])/', $content);
+	$k = 0;
+	foreach($arr as $text){
+		if(strpos($text, '<img') !== false){
+			$final_content .= $html_img_slide[$k];
+			$k++;
+		} else {
+			$final_content .= $text;
+		}
+	}
+	
+	return $final_content;
+}
+
+function BBC_Sharebox($content){
+	preg_match_all("'\[share\](.*?)\[\/share\]'si", $content, $matches);
+	$final_content = '';
+	$share = [];
+	foreach($matches[1] as $match){
+		preg_match_all("'title=\"(.*?)\" description=\"(.*?)\" thumbnail=\"(.*?)\" url=\"(.*?)\"'si", $match, $metadatas);
+		$title = isset($metadatas[1][0]) ? $metadatas[1][0] : '';
+		$description = isset($metadatas[2][0]) ? $metadatas[2][0] : '';
+		$thumbnail = isset($metadatas[3][0]) ? $metadatas[3][0] : '';
+		$url = isset($metadatas[4][0]) ? $metadatas[4][0] : '';
+		
+		$share[] = custom_sharing_site_panel($title, $description, $thumbnail, $url);
+	}
+	
+	$arr = preg_split('/(\[share\])|(\[\/share\])/', $content);
+	
+	$k = 0;
+	foreach($arr as $text){
+		if(strpos($text, "title=") !== false){
+			$final_content .= $share[$k];
+			$k++;
+		} else {
+			$final_content .= $text;
+		}
+	}
+	
+	return $final_content;
+}
 ?>
